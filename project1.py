@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 
 def myFunc() :
-    ##다음페이지
+    ##다음페이지뜨기
     return
 
 
