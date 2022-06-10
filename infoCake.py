@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QMessageBox
 from PyQt5.QtCore import QDate
 import os
 import sqlite3
+import cvcake
 
 
 path = os.path.dirname(os.path.realpath(__file__))  ##현재디렉토리경로
@@ -19,7 +20,7 @@ class WindowClass(QMainWindow, form_class):
     def btnClick(self):
         self.name = str(self.name_input.toPlainText())
         self.phone = str(self.phone_input.toPlainText())
-        self.require = str(self.require_input.toPlainText())
+        self.require = str(self.require_input.toPlainText()) 
         
         if(self.rb1.isChecked()):
             self.hosu = "1"
@@ -47,11 +48,15 @@ class WindowClass(QMainWindow, form_class):
             ##c.execute("INSERT INTO userTable VALUES('바보', '1234')")
             print(c.fetchall())
             conn.close()
-        
-    
+            ##케이크그리는 창 뜨기
+            self.close()
+            cvcake.drawcake()   ##케이크그리기
+            
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     myWindow = WindowClass()
     myWindow.show()
-    app.exec_()
+    sys.exit(app.exec_())
+
+    
