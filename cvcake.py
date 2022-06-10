@@ -67,7 +67,7 @@ def drawcake():
     cv2.createTrackbar('G', 'image', 0, 255, nothing)
     cv2.createTrackbar('B', 'image', 0, 255, nothing)
     cv2.createTrackbar('weight', 'image', 5, 30, nothing)
-    cv2.putText(img, 'Hello World', (110, 240), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 5)
+    ##cv2.putText(img, 'Hello World', (110, 240), cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 5)
     
     while(1):
         cv2.imshow('image', img)
