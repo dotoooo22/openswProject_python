@@ -6,7 +6,7 @@ import os
 import sqlite3
 import cvcake
 
-
+##주문자정보를받고그림그리는함수호출
 path = os.path.dirname(os.path.realpath(__file__))  ##현재디렉토리경로
 form_class = uic.loadUiType(path + "/info.ui")[0]
 
